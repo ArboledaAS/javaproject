@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.net.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.URL?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.*?>
+
+<VBox fx:id="contenedor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="657.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpri.project.controller.MainController">
+    <stylesheets>
+        <URL value="@main_view.css" />
+    </stylesheets>
+    <children>
+        <HBox alignment="CENTER">
+            <children>
+                <Label text="FingerPrint Finder">
+                    <font>
+                        <Font name="Lucida Sans Regular" size="17.0" />
+                    </font>
+                </Label>
+            </children>
+            <VBox.margin>
+                <Insets top="55.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER">
+            <children>
+                <HBox>
+                    <children>
+                        <JFXButton buttonType="RAISED" onAction="#leer_archivo" styleClass="button-raised" text="Choose File">
+                        </JFXButton>
+                    </children>
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                </HBox>
+                <JFXTextField fx:id="nombre_archivo" editable="false" prefHeight="25.0" prefWidth="221.0" style="-fx-padding-left: 30px;">
+                </JFXTextField>
+            </children>
+            <VBox.margin>
+                <Insets top="55.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="334.0" prefWidth="657.0">
+            <VBox.margin>
+                <Insets top="30.0" />
+            </VBox.margin>
+            <children>
+            <ImageView fx:id="viewer_image" fitHeight="305.0" fitWidth="305.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+                <VBox alignment="CENTER" prefHeight="305.0" prefWidth="223.0">
+                    <children>
+                  <JFXSpinner fx:id="loader_search" visible="false" />
+                        <Label fx:id="result_search" alignment="CENTER" contentDisplay="TOP" disable="false" prefHeight="110.0" prefWidth="223.0" textAlignment="CENTER" visible="false" wrapText="true">
+                            <font>
+                                <Font name="Lucida Sans Regular" size="16.0" />
+                            </font>
+                        </Label>
+                        <JFXButton fx:id="btn_search" buttonType="RAISED" disable="true" onAction="#search_image" styleClass="button-raised" text="Search" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

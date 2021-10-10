@@ -1,0 +1,3 @@
+[submodule "recogizer-images"]
+	path = recogizer-images
+	url = https://github.com/ArboledaAS/pythonproject.git
